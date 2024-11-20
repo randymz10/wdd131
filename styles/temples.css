@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+:root {
+  --primary: #27374d;
+  --secondary: #526d82;
+  --accent-1: #9db2bf;
+  --accent-2: #dde6ed;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  background-color: var(--secondary);
+  color: var(--accent-1);
+}
+
+#menu {
+  font-size: 1.5rem;
+  border: 0;
+  background: none;
+  color: #000;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#menu::before {
+  content: "☰";
+}
+
+#menu.open::before {
+  content: "❌";
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.navigation a {
+  display: none;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: larger;
+  color: var(--accent-2);
+}
+
+.navigation a:hover {
+  background-color: var(--primary);
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.open a {
+  display: block;
+}
+
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+main > section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 25px;
+  place-items: center;
+}
+figure {
+  display: flex;
+  flex-direction: column;
+}
+figure img {
+  width: 250px;
+}
+.footer {
+  text-align: center;
+  background-color: var(--secondary);
+  color: var(--accent-2);
+  padding: 1rem;
+}
