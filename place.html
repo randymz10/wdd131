@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta description="Place page" />
+    <meta author="Randy Muñoz" />
+    <link rel="stylesheet" href="styles/place.css" />
+    <link rel="stylesheet" href="./styles/place-large.css" />
+    <script src="./scripts/place.js" defer></script>
+    <script src="./scripts/getdates.js" defer></script>
+    <title>Place</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Carúpano</h1>
+    </header>
+    <main class="main">
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/hero-responsive.webp"
+        />
+        <img
+          src="./images/hero-mobile.webp"
+          alt="Beach image of Carúpano"
+          width="100%"
+          height="auto"
+        />
+      </picture>
+      <section class="container">
+        <section class="card">
+          <h2 class="title">Data</h2>
+          <ul>
+            <li><strong>Country:</strong> 🇻🇪 Venezuela</li>
+            <li><strong>State:</strong> Sucre</li>
+            <li><strong>Municipality:</strong> Bermúdez</li>
+            <li><strong>Area:</strong> 203 km2 (78 sq mi)</li>
+            <li><strong>Population:</strong> 173.877 hab.</li>
+            <li><strong>Time zone:</strong> UTC-4:30 (VST)</li>
+          </ul>
+        </section>
+        <hr />
+        <section class="card">
+          <h2 class="title">Weather <span class="emoticon">⛅</span></h2>
+          <img
+            src="./images/weather-svgrepo-com.svg"
+            alt="Weather image"
+            width="100px"
+          />
+          <ul>
+            <li><strong>Temperature:</strong> 26°C</li>
+            <li><strong>Conditions:</strong> Mostly clear</li>
+            <li><strong>RealFeel®:</strong> 30°C</li>
+            <li><strong>Wind:</strong> SE 12 km/h</li>
+            <li><strong>Wind Chill:</strong> <span id="windChill"></span></li>
+          </ul>
+        </section>
+      </section>
+    </main>
+    <footer class="footer">
+      <p>&copy;<span id="currentyear"></span> Randy Muñoz Brazil 🇧🇷</p>
+      <p>Carúpano</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>

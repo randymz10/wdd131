@@ -49,6 +49,6 @@ article p {
 footer {
 	margin-top: 1rem;
 	border-top: 1px solid rgba(0, 0, 0, 0.1);
-    padding: .5rem 0;
+    padding: .5rem 0 ;
 	font-size: smaller;
 }
