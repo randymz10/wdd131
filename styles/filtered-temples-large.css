@@ -1,0 +1,22 @@
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  
+  #menu {
+      display: none;
+    }
+    
+    .navigation {
+        justify-content: flex-end;
+        flex-direction: row;
+    }
+    
+    .navigation a {
+      display: block;
+      flex: 1 1 100%;
+    }
+}
