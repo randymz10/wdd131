@@ -83,17 +83,57 @@ hamButton.addEventListener("click", function () {
 
 const templesHTML = document.querySelector("#temples");
 
-temples.forEach((temple) => {
-  const templeHTML = document.createElement("article");
-  templeHTML.className = "card";
-  templeHTML.innerHTML = `
+function createTempleCards(filteredTemples) {
+  templesHTML.innerHTML = "";
+  filteredTemples.forEach((temple) => {
+    temple.dedicated;
+    const templeHTML = document.createElement("article");
+    templeHTML.className = "card";
+    templeHTML.innerHTML = `
     <h3 class="card-title">${temple.templeName}</h3>
     <div class="card-body">
-      <p><span class="card-subtitle">LOCATION:</span> ${temple.location}</p>
-      <p><span class="card-subtitle">DEDICATED:</span> ${temple.dedicated}</p>
-      <p><span class="card-subtitle">SIZE:</span> ${temple.area}sq ft</p>
+    <p><span class="card-subtitle">LOCATION:</span> ${temple.location}</p>
+    <p><span class="card-subtitle">DEDICATED:</span> ${temple.dedicated}</p>
+    <p><span class="card-subtitle">SIZE:</span> ${temple.area}sq ft</p>
     </div>
     <img src="${temple.imageUrl}" alt="${temple.templeName}" class="img-thumbnail" loading="lazy">
-      `;
-  templesHTML.appendChild(templeHTML);
+    `;
+    templesHTML.appendChild(templeHTML);
+  });
+}
+
+createTempleCards(temples);
+
+const home = document.querySelector("#home");
+const oldTemples = document.querySelector("#old");
+const newTemples = document.querySelector("#new");
+const largeTemples = document.querySelector("#large");
+const smallTemples = document.querySelector("#small");
+
+home.addEventListener("click", () => {
+  createTempleCards(temples);
+});
+
+oldTemples.addEventListener("click", () => {
+  const filteredTemples = temples.filter(
+    (temple) => parseInt(temple.dedicated.split(",")[0]) < 1900
+  );
+  createTempleCards(filteredTemples);
+});
+
+newTemples.addEventListener("click", () => {
+  const filteredTemples = temples.filter(
+    (temple) => parseInt(temple.dedicated.split(",")[0]) > 2000
+  );
+  createTempleCards(filteredTemples);
+});
+
+largeTemples.addEventListener("click", () => {
+  const filteredTemples = temples.filter((temple) => temple.area > 90000);
+  createTempleCards(filteredTemples);
+});
+
+smallTemples.addEventListener("click", () => {
+  const filteredTemples = temples.filter((temple) => temple.area < 10000);
+  createTempleCards(filteredTemples);
 });
