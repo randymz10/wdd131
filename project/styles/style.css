@@ -1,0 +1,61 @@
+:root {
+  --primary: #004aad;
+  --secondary: #f4f4f4;
+  --accent: #ff9900;
+  --text: #333;
+  --font-headings: "Ubuntu", "Open Sans", sans-serif;
+  --font-text: "Roboto", Arial, sans-serif;
+}
+
+body {
+  font-family: var(--font-text);
+  line-height: 1.6;
+  color: var(--text);
+  margin: 0;
+  padding: 20px;
+  background-color: var(--secondary);
+  max-width: 900px;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3 {
+  color: var(--primary);
+  font-family: var(--font-headings);
+}
+p {
+  color: var(--text); /* Neutral color for text */
+}
+
+td,
+th {
+  padding: 5px;
+  text-align: center;
+}
+
+.primary {
+  background-color: var(--primary);
+  color: #f4f4f4;
+}
+
+.secondary {
+  background-color: var(--secondary);
+  color: var(--text);
+}
+
+.accent {
+  background-color: var(--accent);
+  color: var(--text);
+}
+
+.section {
+  background: #fff;
+  margin: 20px 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.wireframe img {
+  max-width: 100%;
+  height: auto;
+}
