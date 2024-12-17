@@ -1,0 +1,123 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+select,
+input,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+legend {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: #777;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  
+  align-items: center;
+  width: 160px;
+  margin: 40px auto;
+  position: relative;
+}
+
+.star-rating input {
+  display: none;
+  position: relative;
+  caret-color: rgba(0, 0, 0, 0);
+}
+/* set properties of all labels */
+.star-rating > label {
+  width: 30px;
+  height: 30px;
+  font-family: Arial;
+  font-size: 30px;
+  transition: 0.2s ease;
+  color: orange;
+}
+/* give label a hover state */
+.star-rating label:hover {
+  color: #ff69b4;
+  transition: 0.2s ease;
+}
+.star-rating label:active::before {
+  transform: scale(1.1);
+}
+
+/* set shape of unselected label */
+.star-rating label::before {
+  content: "\2606";
+  position: absolute;
+  top: 0px;
+  line-height: 26px;
+}
+/* set full star shape for checked label and those that come after it */
+.star-rating input:checked ~ label:before {
+  content: "\2605";
+}
+
+@-moz-document url-prefix() {
+  .star-rating input:checked ~ label:before {
+    font-size: 36px;
+    line-height: 21px;
+  }
+}

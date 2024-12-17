@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/form.css" />
+    <script src="./scripts/form.js" defer></script>
+    <script src="./scripts/getdates.js" defer></script>
+    <title>Product Review Form</title>
+  </head>
+  <body>
+    <header>
+      <h1>Product Review Form</h1>
+    </header>
+    <main>
+      <form method="get" action="review.html" id="reviewForm">
+        <!-- Product Name -->
+        <div>
+          <label for="productName">Product Name:</label>
+          <select id="productName" name="productName" required>
+            <option value="" disabled selected>Select a Product...</option>
+            <!-- Options populated dynamically by JavaScript -->
+          </select>
+        </div>
+
+        <!-- Overall Rating -->
+        <div>
+          <fieldset class="star-rating">
+            <legend>Overall Rating:</legend>
+            <input type="radio" id="star1" name="rating" value="1" required />
+            <label for="star1"></label>
+            <input type="radio" id="star2" name="rating" value="2" />
+            <label for="star2"></label>
+            <input type="radio" id="star3" name="rating" value="3" />
+            <label for="star3"></label>
+            <input type="radio" id="star4" name="rating" value="4" />
+            <label for="star4"></label>
+            <input type="radio" id="star5" name="rating" value="5" />
+            <label for="star5"></label>
+          </fieldset>
+        </div>
+
+        <!-- Date of Installation -->
+        <div>
+          <label for="installationDate">Date of Installation:</label>
+          <input
+            type="date"
+            id="installationDate"
+            name="installationDate"
+            required
+          />
+        </div>
+
+        <!-- Useful Features -->
+        <div>
+          <fieldset>
+            <legend>Useful Features:</legend>
+            <div>
+              <input
+                type="checkbox"
+                id="feature1"
+                name="features"
+                value="Feature1"
+              />
+              <label for="feature1">Feature 1</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="feature2"
+                name="features"
+                value="Feature2"
+              />
+              <label for="feature2">Feature 2</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                id="feature3"
+                name="features"
+                value="Feature3"
+              />
+              <label for="feature3">Feature 3</label>
+            </div>
+          </fieldset>
+        </div>
+
+        <!-- Written Review -->
+        <div>
+          <label for="review">Written Review:</label>
+          <textarea
+            id="review"
+            name="review"
+            placeholder="Write your review here..."
+          ></textarea>
+        </div>
+
+        <!-- User Name -->
+        <div>
+          <label for="userName">Your Name:</label>
+          <input type="text" id="userName" name="userName" />
+        </div>
+
+        <!-- Submit Button -->
+        <div>
+          <input type="submit" value="Submit Review" />
+        </div>
+      </form>
+    </main>
+    <footer class="footer">
+      <p>&copy;<span id="currentyear"></span> Randy Muñoz Brazil 🇧🇷</p>
+      <p id="lastModified"></p>
+    </footer>
+  </body>
+</html>
