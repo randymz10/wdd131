@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="descriptiom"
+      content="WDD 131 - Dynamic Web Fundamentals Randy Muñoz final project that talk about Mendix low code platform"
+    />
+    <meta name="author" content="Randy Muñoz" />
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+    rel="stylesheet"
+    />      
+    <script src="scripts/script.js" defer></script>
+    <script src="../scripts/getdates.js" defer></script>
+    <title>Resources - Mendix Low-Code Learning Hub</title>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="topbar">
+                <a href="index.html" class="logo">Mendix Low-Code Learning Hub</a>
+                <button id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+            <div>
+                <ul id="navMenu">
+                  <li><a href="index.html">Home</a></li>
+                  <li><a href="tutorials.html">Tutorials</a></li>
+                  <li><a href="resources.html">Resources</a></li>
+                </ul>
+            </div>
+          </nav>
+    </header>
+
+    <main class="container">
+        <h1>Tools and Community Resources</h1>
+
+        <section class="official-resources">
+            <h2>Official Mendix Resources</h2>
+            <ul class="resource-list">
+                <li>
+                    <h3>Mendix Documentation</h3>
+                    <p>Comprehensive guides and references for Mendix development.</p>
+                    <a href="https://docs.mendix.com/" target="_blank" rel="noopener noreferrer" class="resource-link">Visit Documentation</a>
+                </li>
+                <li>
+                    <h3>Mendix Community Forums</h3>
+                    <p>Connect with other Mendix developers and get your questions answered.</p>
+                    <a href="https://forum.mendix.com/" target="_blank" rel="noopener noreferrer" class="resource-link">Join the Community</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="webinar-signup">
+            <h2>Upcoming Webinars</h2>
+            <form id="webinarForm">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <select id="webinarTopic" name="webinarTopic" required>
+                    <option value="">Select a Webinar Topic</option>
+                    <option value="intro">Introduction to Mendix</option>
+                    <option value="advanced">Advanced Mendix Techniques</option>
+                    <option value="integration">Mendix Integration Strategies</option>
+                </select>
+                <button type="submit">Sign Up for Webinar</button>
+            </form>
+        </section>
+
+        <section class="case-studies">
+            <h2>Success Stories</h2>
+            <div class="case-study">
+                <h3>Global Bank Transforms Customer Onboarding</h3>
+                <p>Learn how a major bank reduced customer onboarding time by 80% using Mendix.</p>
+                <a href="#" class="case-study-link">Read Case Study</a>
+            </div>
+            <div class="case-study">
+                <h3>Manufacturing Company Streamlines Operations</h3>
+                <p>Discover how a manufacturing firm increased efficiency by 40% with a custom Mendix app.</p>
+                <a href="#" class="case-study-link">Read Case Study</a>
+            </div>
+        </section>
+
+        <section class="templates-modules">
+            <h2>Templates and Pre-built Modules</h2>
+            <div class="template-grid">
+                <div class="template">
+                    <h3>Customer Portal Template</h3>
+                    <p>A ready-to-use template for creating customer portals.</p>
+                    <a href="#" class="template-link">Download Template</a>
+                </div>
+                <div class="template">
+                    <h3>Inventory Management Module</h3>
+                    <p>A pre-built module for managing inventory in Mendix apps.</p>
+                    <a href="#" class="template-link">Download Module</a>
+                </div>
+                <div class="template">
+                    <h3>HR Onboarding App</h3>
+                    <p>Streamline your HR onboarding process with this template.</p>
+                    <a href="#" class="template-link">Download Template</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentyear"></span> Mendix Low-Code Learning Hub. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
